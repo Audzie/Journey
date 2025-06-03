@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet" />
+    <link rel="icon" href="f.png">
+<style>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+/*  */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 27.9%;
+    margin-bottom: 20px;
+}
+
+/* Kanan */
+.kanan-atas {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.p-atas p {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 18px;
+}
+
+.p-atas {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 120px;
+    height: 40px;
+    border-radius: 40px;
+}
+
+.kanan-atas img {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+
+.sosmed {
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    border: 2px solid black;
+    padding: 6px;
+}
+/* Tengah */
+.tengah-atas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.tengah-atas p {
+    font-family: 'Montserrat', sans-serif;
+}
+/* Kiri */
+.kiri-atas {
+    display: flex;
+    gap: 30px;
+}
+
+.kiri-atas p {
+  cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+/* Main */
+
+.eye {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.eye img {
+    position: absolute;
+    bottom: 490px;
+    width: 400px;
+    right: 600px;
+}
+
+.p-journey {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    border-radius: 40px;
+    margin-top: 20px;
+    height: 40px;
+    background-color: #FEE400;
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+/* Grid */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(7, 100px);
+    gap: 19px;
+    height: auto;
+    padding: 0 2%;
+    margin-bottom: 100px;
+}
+
+.parent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.div1 {
+    grid-column: span 2 / span 2;
+    grid-row: span 7 / span 7;
+}
+
+.div5 {
+    grid-column: span 2 / span 2;
+    grid-row: span 7 / span 7;
+    grid-column-start: 3;
+}
+
+.div6 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 5;
+}
+
+.div7 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 5;
+    grid-row-start: 4;
+}
+
+/* konten2 */
+
+.konten2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+.p-isi-konten2 {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+
+    .accordion h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .accordion p.intro {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .accordion {
+      margin-top: 30px;
+      border-top: 1px solid #ccc;
+      width: 45%;
+    }
+
+    .accordion-item {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .accordion-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 15px 0;
+      font-size: 15px;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .accordion-content p {
+      padding: 0 0 15px 0;
+      font-size: 16px;
+    }
+
+    .accordion-item.active .accordion-content {
+      max-height: 500px;
+    }
+
+    .accordion-icon {
+      font-size: 20px;
+    }
+
+    .accordion-title p {
+        font-size: 18px;
+    }
+
+    /* Tengah kanan */
+
+    .konten2-kanan {
+        display: flex;
+    }
+
+    .konten2-kanan img {
+        width: 650px;
+        height: 850px;
+        z-index: 1;
+    }
+
+    .kotak-kuning {
+        right: 140px;
+        top: 1520px;
+        position: absolute;
+        width: 650px;
+        height: 850px;
+        background-color: #FEE400;
+        z-index: 0;
+    }
+
+    .konten2-kiri {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .konten-bawah1 {
+        width: 100%;
+        height: 900px;
+        background-color: rgb(246, 246, 246);
+        margin-bottom: 300px;
+    }
+
+    /* grid bwh */
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(7, 170px);
+            grid-template-rows: repeat(12, 200px);
+            background-color: rgb(237, 237, 237);
+            gap: 15px;
+            padding-left:1.5%;
+            padding-right: 1.5%;
+            padding-top: 11%;
+            position: relative;
+            margin-bottom: 100px;
+        }
+
+        .judul {
+            position: absolute;
+            top: 110px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 32px;
+            padding: 20px 0;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        .container div {
+            background-size: cover;
+        }
+
+        .kotak1 {
+            background-image: url(bwh1.png);
+            grid-column: 1/8;
+            grid-row: 1/5;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+
+        .kotak-kanan1 {
+          width: 250px;
+          height: 140px;
+          background-color: #222021;
+          z-index: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 20px;
+        }
+
+        .kotak-kanan1 p {
+          color: white;
+          font-family: 'Montserrat', sans-serif;
+        }
+
+        .kotak2 {
+            background-image: url(bwh2.png);
+            grid-column: 8/10;
+            grid-row: 1/5;
+        }
+
+        .kotak3 {
+            background-image: url(bwh3.png);
+            grid-column: 1/4;
+            grid-row: 5/7;
+        }
+
+        .kotak4 {
+            background-image: url(bwh4.png);
+            grid-column: 4/10;
+            grid-row: 5/9;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        .kotak-kanan4 {
+          width: 250px;
+          height: 140px;
+          background-color: #222021;
+          z-index: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 20px;
+        }
+
+        .kotak-kanan4 p {
+          color: white;
+          font-family: 'Montserrat', sans-serif;
+        }
+
+        .kotak5 {
+            background-image: url(bwh5.png);
+            grid-column: 1/4;
+            grid-row: 7/11;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end; 
+        }
+
+        .kotak-kanan5 {
+          width: 250px;
+          height: 140px;
+          background-color: #222021;
+          z-index: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 20px;
+        }
+
+        .kotak-kanan5 p {
+          color: white;
+          font-family: 'Montserrat', sans-serif;
+        }
+
+        .kotak6 {
+            background-image: url(bwh6.png);
+            width: 637px;
+            grid-row: 9/11;
+        }
+
+        .kotak7 {
+            background-image: url(bwh7.png);
+            margin-left: 285px;
+            height: 300px;
+            width: 637px;
+        }
+
+        .kotak8 {
+            background-image: url(bwh8.png);
+            height: 300px;
+            grid-column: 1/4;
+        }
+
+        .kotak9 {
+            background-image: url(bwh9.png);
+            height: 300px;
+            width: 637px;
+        }
+
+        .kotak10 {
+            background-image: url(bwh10.png);
+            width: 637px;
+            margin-left: 470px;
+            height: 414px;
+            margin-top: -113px;
+        }
+        /*  */
+    .testimonial-section {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .testimonial-title {
+      display: flex;
+      align-items: center;
+      font-size: 25px;
+    }
+
+    .testimonial-title img {
+      width: 45px;
+      height: 45px;
+      margin-left: 10px;
+    }
+
+    .dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .dot {
+      cursor: pointer;;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #222;
+      background-color: white;
+    }
+
+    .dot.active {
+      background-color: #FEE400;
+    }
+
+    .testimonial-cards {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 20px;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .card {
+      border: 2px solid #333;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* buat tengah lebih tinggi */
+    .card:nth-child(2) {
+      margin-bottom: -30px;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .author {
+      font-weight: bold;
+      margin-top: 30px;
+    }
+
+    .position {
+      font-size: 13px;
+      color: #000000;
+    }
+
+    .testimonial-div {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      color: #000;
+    }
+
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .testimonial-title {
+      display: flex;
+      align-items: center;
+      font-size: 25px;
+    }
+
+    .testimonial-title img {
+      width: 45px;
+      height: 45px;
+      margin-left: 10px;
+    }
+
+    .dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 16px;
+      height: 16px;
+      border: 2px solid #222;
+      background-color: white;
+    }
+
+    .dot.active {
+      background-color: #FEE400;
+    }
+
+    .testimonial-cards {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 20px;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .card {
+      border: 2px solid #333;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+      background-color: #fff;
+      color: #000;
+    }
+
+    .card:nth-child(2) {
+      margin-bottom: -30px;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .author {
+      font-weight: bold;
+      margin-top: 30px;
+    }
+
+    .position {
+      font-size: 13px;
+      color: #000000;
+    }
+
+    /* Footer div */
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+}
+.input-wrapper textarea {
+  padding-right: 40px;
+}
+.input-wrapper input {
+  padding-right: 40px;
+}
+
+    .footer-div {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 80px;
+      background-color: #1b191a;
+      border-top: 1px solid #3c3b3c;
+      font-family: 'Inter', sans-serif;
+      color: #fff;
+      align-items: center;
+      margin-top: 120px;
+    }
+
+    .footer-text {
+      max-width: 450px;
+    }
+
+    .footer-text h1 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 48px;
+      line-height: 1.2;
+      font-weight: 700;
+      margin: 0;
+      color: #fff;
+    }
+
+    .footer-text h1 span {
+      margin-top: 200px;
+      color: #ffe100;
+      font-weight: 700;
+    }
+
+    .footer-text p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      margin-top: 24px;
+      color: #bcbcbc;
+      margin-right: 100px;
+    }
+
+    .contact-form {
+      width: 480px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      background-color: transparent;
+      border: 1px solid #bcbcbc;
+      color: #fff;
+      padding: 16px;
+      font-size: 16px;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 12px;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #bcbcbc;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      height: 270px;
+    }
+
+    .contact-form .submit-btn {
+      background-color: #ffe100;
+      border: none;
+      width: 100%;
+      padding: 14px 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1b191a;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #3c3b3c;
+      background-color: #1b191a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 80px;
+      font-size: 13px;
+      color: #bcbcbc;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .footer-bottom a {
+      color: #bcbcbc;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+    .garis {
+      position: relative;
+    }
+    .garis img {
+      left: -50px;
+      top: -50px;
+      position: absolute;
+      width: 60px;
+    }
+</style>
+</head>
+<body>
+    <header>
+<div class="kiri-atas">
+    <p>About</p>
+    <p>Portofolio</p>
+    <p>Testimonials</p>
+</div>
+
+<div class="tengah-atas">
+    <p style="font-size: 25px; font-weight: 500;">Oliver Bennett</p>
+    <p style="font-size: 14px;">STREET PHOTOGRAPHY</p>
+</div>
+
+<div class="kanan-atas">
+    <div class="sosmed">
+        <img src="fb1.png">
+    </div>
+
+    <div class="sosmed">
+        <img src="ig1.png">
+    </div>
+    
+    <div class="sosmed">
+        <img src="twt1.png">
+    </div>
+
+    <div class="p-atas">
+        <p>Let's Talk</p>
+    </div>
+</div>
+    </header>
+<hr>
+<!-- Main -->
+<div class="eye">
+    <p style="margin-top: 140px; font-size: 70px; font-family: 'Libre Baskerville', serif; font-weight: 700;">Urban stories</p>
+    <p style="margin-bottom: 30px; font-size: 70px; font-family: 'Libre Baskerville', serif; font-weight: 700;">through the lens</p>
+    <img src="line2.png">
+    <p style="font-family: 'Montserrat', sans-serif; font-size: 23px;">Capturing the unseen rhythms of the city.</p>
+    <div class="p-journey">
+        <p>Discover My Journey</p>
+    </div>
+</div>
+
+
+<div class="parent">
+    <div class="div1">
+        <img src="img1.png">
+    </div>
+    <div class="div5">
+        <img src="img2.png">
+    </div>
+    <div class="div6">
+        <img src="img3.png">
+    </div>
+    <div class="div7">
+        <img src="img4.png">
+    </div>
+</div>
+<!-- konten 2 -->
+
+<div class="konten2">
+
+<div class="konten2-kiri">
+
+    <div class="konten2-teks">
+        <p style=" font-size: 35px; font-family: 'Libre Baskerville', serif;">Hello! I'm Oliver Bennett</p>
+        <p style="margin-top: 20px;" class="p-isi-konten2">A connoisseur of cityscapes and a</p>
+        <p class="p-isi-konten2">storyteller through the lens, based in the</p>
+        <p class="p-isi-konten2">vibrant heart of London.</p>
+
+        <p class="p-isi-konten2" style="margin-top: 30px;">With over a decade of experience, I have</p>
+        <p class="p-isi-konten2">been capturing the essence of urban life, </p>
+        <p class="p-isi-konten2">one frame at a time.</p>
+
+    <div class="accordion">
+
+    <div class="accordion-item active">
+      <div class="accordion-title">
+        <p>My Journey</p>
+        <span class="accordion-icon">×</span>
+      </div>
+      <div class="accordion-content">
+        <p>My photography journey began on the bustling streets of London, starting as a hobby and quickly blossoming into a fervent passion</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">
+        <p>My Philosophy</p>
+        <span class="accordion-icon">×</span>
+      </div>
+      <div class="accordion-content">
+        <p>My photography journey began on the bustling streets of London, starting as a hobby and quickly blossoming into a fervent passion</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">
+        <p>Accolades and Experiences</p>
+        <span class="accordion-icon">×</span>
+      </div>
+      <div class="accordion-content">
+        <p>My photography journey began on the bustling streets of London, starting as a hobby and quickly blossoming into a fervent passion</p>
+      </div>
+    </div>
+
+        <div class="accordion-item">
+      <div class="accordion-title">
+        <p>Beyond the lens</p>
+        <span class="accordion-icon">×</span>
+      </div>
+      <div class="accordion-content">
+        <p>My photography journey began on the bustling streets of London, starting as a hobby and quickly blossoming into a fervent passion</p>
+      </div>
+    </div>
+    </div>
+    </div>
+</div>
+<!--  -->
+
+    <div class="konten2-kanan">
+        <div class="kotak-kuning"></div>
+        <img src="fototengah.png">
+    </div>
+
+            <img style="right: 757px; top: 1528px; position: absolute; width: 100px; z-index: 2; height: 110px;" src="bintang2.png">
+</div>
+</div>
+
+    <div class="container">
+
+        <div class="c-p">
+            <p>Some of my latest shot</p>
+        </div>
+        <div class="kotak judul">Some of my latest shots</div>
+        <div class="kotak1">
+          <div class="kotak-kanan1">
+            <p style="font-weight: 600; font-size: 17px;">London Nights</p>
+            <br>
+            <P>London UK,November 2023.</P>
+            <p>FUJIFILM,X100S</p>
+          </div>
+        </div>
+        <div class="kotak2"></div>
+        <div class="kotak3"></div>
+        <div class="kotak4">
+          <div class="kotak-kanan4">
+            <p style="font-weight: 600; font-size: 17px;">UK Architucture</p>
+            <br>
+            <p>Manchester, August 2023. </p>
+            <p>FUJIFILM, X100S</p>
+          </div>
+        </div>
+        <div class="kotak5">
+          <div class="kotak-kanan5">
+            <p style="font-weight: 600; font-size: 17px;">Summer In Liverpool</p>
+            <br>
+            <p>Liverpool, February 2023.</p>
+            <p>NORITSU KOKI</p>
+          </div>
+        </div>
+        <div class="kotak6"></div>
+        <div class="kotak7"></div>
+        <div class="kotak8"></div>
+        <div class="kotak9"></div>
+        <div class="kotak10"></div>
+    </div>
+
+<!--  -->
+
+
+
+
+    <div class="testimonial-div">
+    <div class="testimonial-header">
+      <div class="testimonial-title">
+        Testimonial
+        <img src="smile.png">
+      </div>
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+
+    <div class="testimonial-cards">
+      <div class="card">
+        <p>"Oliver's unique eye for urban landscapes has brought our campaign to life. His ability to capture the soul of the city is unparalleled."</p>
+        <div class="author">Emily Clark,</div>
+        <div class="position">Marketing Director - Cityscape Magazine</div>
+      </div>
+      <div class="card">
+        <p>"I hired Oliver for a personal photoshoot, and he exceeded all expectations. His work is not just photography; it's storytelling at its finest."</p>
+        <div class="author">Liam Thompson,</div>
+        <div class="position">Entrepreneur</div>
+      </div>
+      <div class="card">
+        <p>"Oliver's workshop opened my eyes to the beauty of urban photography. His guidance and techniques were invaluable. A true master of his craft!"</p>
+        <div class="author">Sarah Jenkins,</div>
+        <div class="position">Aspiring Photographer</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-div">
+    <div class="footer-text">
+      <div class="garis">
+        <img src="garis.png" alt="">
+      </div>
+      <h1>
+        <span>I’d  love</span> to hear<br />from you.
+      </h1>
+      <p>
+        Whether you're interested in booking a photoshoot or just want to say hello, feel free to drop me a message.
+      </p>
+    </div>
+
+<div class="contact-form">
+  <div class="input-wrapper">
+    <input style="border-top-left-radius: 15px; border-top-right-radius: 15px;" type="text" placeholder="Full name" required />
+    <img src="bintang.png" class="input-icon">
+  </div>
+
+  <div class="input-wrapper">
+    <input type="email" placeholder="Email Address" required />
+    <img src="bintang.png" class="input-icon">
+  </div>
+
+  <div class="input-wrapper">
+    <input type="text" placeholder="Phone Number" required />
+    <img src="bintang.png" class="input-icon">
+  </div>
+
+    <textarea style="border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;" placeholder="Input Field"></textarea>
+
+  <button class="submit-btn">Submit</button>
+</div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>All rights reserved. 2024</div>
+    <div>
+      <a href="">Privacy</a>
+      <a href="">Cookies</a>
+      <a href="">Terms</a>
+    </div>
+  </div>
+
+<script>
+    const items = document.querySelectorAll('.accordion-item');
+
+items.forEach(item => {
+  item.querySelector('.accordion-title').addEventListener('click', () => {
+    items.forEach(i => {
+      if (i !== item) {
+        i.classList.remove('active');
+        i.querySelector('.accordion-icon').textContent = '+';
+      }
+    });
+
+    const isActive = item.classList.contains('active');
+    item.classList.toggle('active');
+    item.querySelector('.accordion-icon').textContent = isActive ? '+' : '×';
+  });
+});
+</script>
+</body>
+</html>
