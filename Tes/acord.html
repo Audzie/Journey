@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accordion Profile</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      padding: 40px;
+      max-width: 500px;
+      margin: auto;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    p.intro {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .accordion {
+      margin-top: 30px;
+      border-top: 1px solid #ccc;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .accordion-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 15px 0;
+      font-size: 15px;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .accordion-content p {
+      padding: 0 0 15px 0;
+    }
+
+    .accordion-item.active .accordion-content {
+      max-height: 500px;
+    }
+
+    .accordion-icon {
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hello! I'm Oliver Bennett</h1>
+  <p class="intro">A connoisseur of cityscapes and a storyteller through the lens, based in the vibrant heart of London.</p>
+  <p class="intro">With over a decade of experience, I have been capturing the essence of urban life, one frame at a time.</p>
+
+  <div class="accordion">
+    <div class="accordion-item active">
+      <div class="accordion-title">
+        My Journey
+        <span class="accordion-icon">×</span>
+      </div>
+      <div class="accordion-content">
+        <p>My photography journey began on the bustling streets of London, starting as a hobby and quickly blossoming into a fervent passion.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">
+        My Philosophy
+        <span class="accordion-icon">+</span>
+      </div>
+      <div class="accordion-content">
+        <p>I believe that every frame tells a story, and my goal is to find beauty in the everyday urban landscape.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">
+        Accolades and Experiences
+        <span class="accordion-icon">+</span>
+      </div>
+      <div class="accordion-content">
+        <p>Over the years, I’ve been honored with awards and featured in notable publications worldwide.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-title">
+        Beyond the Lens
+        <span class="accordion-icon">+</span>
+      </div>
+      <div class="accordion-content">
+        <p>When I’m not behind the camera, I mentor young photographers and collaborate on community art projects.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const items = document.querySelectorAll('.accordion-item');
+
+    items.forEach(item => {
+      item.querySelector('.accordion-title').addEventListener('click', () => {
+        items.forEach(i => {
+          if (i !== item) {
+            i.classList.remove('active');
+            i.querySelector('.accordion-icon').textContent = '+';
+          }
+        });
+
+        const isActive = item.classList.contains('active');
+        item.classList.toggle('active');
+        item.querySelector('.accordion-icon').textContent = isActive ? '+' : '×';
+      });
+    });
+  </script>
+
+</body>
+</html>

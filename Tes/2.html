@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Footer Contact</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #1b191a;
+      color: #fff;
+    }
+
+    .footer-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 80px;
+      background-color: #1b191a;
+      border-top: 1px solid #3c3b3c;
+    }
+
+    .footer-text {
+      max-width: 450px;
+    }
+
+    .footer-text h1 {
+      font-size: 48px;
+      line-height: 1.2;
+      font-weight: 700;
+      margin: 0;
+      color: #fff;
+    }
+
+    .footer-text h1 span {
+      color: #ffe100;
+      font-weight: 700;
+    }
+
+    .footer-text p {
+      font-size: 16px;
+      margin-top: 24px;
+      color: #bcbcbc;
+    }
+
+    .contact-form {
+      width: 480px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      background-color: transparent;
+      border: 1px solid #bcbcbc;
+      color: #fff;
+      padding: 16px;
+      font-size: 16px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #bcbcbc;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      height: 180px;
+    }
+
+    .contact-form .submit-btn {
+      background-color: #ffe100;
+      border: none;
+      width: 100%;
+      padding: 14px 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1b191a;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #3c3b3c;
+      background-color: #1b191a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 80px;
+      font-size: 13px;
+      color: #bcbcbc;
+    }
+
+    .footer-bottom a {
+      color: #bcbcbc;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="footer-section">
+    <div class="footer-text">
+      <h1>
+        <span style="font-size: 60px;">&#x275D;</span>
+        I’d <span>love</span> to hear<br />from you.
+      </h1>
+      <p>
+        Whether you're interested in booking a photoshoot or just want to say hello, feel free to drop me a message.
+      </p>
+    </div>
+
+    <div class="contact-form">
+      <input type="text" placeholder="Full name *" required />
+      <input type="email" placeholder="Email Address *" required />
+      <input type="text" placeholder="Phone Number *" required />
+      <textarea placeholder="Input Field"></textarea>
+      <button class="submit-btn">Submit</button>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>All rights reserved. 2024</div>
+    <div>
+      <a href="#">Privacy</a>
+      <a href="#">Cookies</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
+</body>
+</html>
