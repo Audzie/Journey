@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Journey</title>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="icon" href="f.png">
 <style>
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -25,7 +31,7 @@ header {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    gap: 27.9%;
+    gap: 27%;
     margin-bottom: 20px;
 }
 
@@ -43,29 +49,44 @@ header {
     font-size: 18px;
 }
 
+.p-atas a {
+  text-decoration: none;
+  color: white;
+}
+
 .p-atas {
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: black;
-    width: 120px;
-    height: 40px;
+    width: 135px;
+    height: 45px;
     border-radius: 40px;
 }
 
 .kanan-atas img {
+    margin-top: 6px;
     cursor: pointer;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    transition: 0.3s;
+}
+
+.kanan-atas img:hover {
+  transform: scale(1.1);
 }
 
 .sosmed {
     cursor: pointer;
-    border-radius: 50px;
+    border-radius: 50%;
     display: flex;
-    border: 2px solid black;
+    border: 1px solid black;
     padding: 6px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* Tengah */
 .tengah-atas {
@@ -77,6 +98,7 @@ header {
 
 .tengah-atas p {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
 }
 /* Kiri */
 .kiri-atas {
@@ -90,6 +112,11 @@ header {
     font-weight: 500;
     font-size: 16px;
 }
+
+.kiri-atas a {
+  text-decoration: none;
+  color: #000;
+}
 /* Main */
 
 .eye {
@@ -102,7 +129,7 @@ header {
 
 .eye img {
     position: absolute;
-    bottom: 490px;
+    bottom: 520px;
     width: 400px;
     right: 600px;
 }
@@ -415,85 +442,12 @@ header {
             margin-top: -113px;
         }
         /*  */
-    .testimonial-section {
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
 
-    .testimonial-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      max-width: 1100px;
-    }
 
-    .testimonial-title {
-      display: flex;
-      align-items: center;
-      font-size: 25px;
-    }
-
-    .testimonial-title img {
-      width: 45px;
-      height: 45px;
-      margin-left: 10px;
-    }
-
-    .dots {
-      display: flex;
-      gap: 6px;
-    }
-
-    .dot {
-      cursor: pointer;;
-      width: 16px;
-      height: 16px;
-      border: 2px solid #222;
-      background-color: white;
-    }
-
-    .dot.active {
-      background-color: #FEE400;
-    }
-
-    .testimonial-cards {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
-      gap: 20px;
-      max-width: 1100px;
-      width: 100%;
-    }
-
-    .card {
-      border: 2px solid #333;
-      padding: 20px;
-      width: 100%;
-      box-sizing: border-box;
-    }
 
     /* buat tengah lebih tinggi */
-    .card:nth-child(2) {
-      margin-bottom: -30px;
-    }
 
-    .card p {
-      font-size: 16px;
-      line-height: 1.7;
-    }
 
-    .author {
-      font-weight: bold;
-      margin-top: 30px;
-    }
-
-    .position {
-      font-size: 13px;
-      color: #000000;
-    }
 
     .testimonial-div {
       padding: 40px;
@@ -530,6 +484,7 @@ header {
     }
 
     .dot {
+    cursor: pointer;
       width: 16px;
       height: 16px;
       border: 2px solid #222;
@@ -541,6 +496,15 @@ header {
     }
 
     .testimonial-cards {
+      display: none;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 20px;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .testimonial-cards.active {
       display: flex;
       justify-content: center;
       margin-top: 30px;
@@ -707,34 +671,41 @@ header {
 </style>
 </head>
 <body>
-    <header>
+<header>
 <div class="kiri-atas">
     <p>About</p>
-    <p>Portofolio</p>
-    <p>Testimonials</p>
+    <p><a href="portofolio.html">Portofolio</a></p>
+    <p><a style="text-decoration: none; color: #000;" href="#testi">Testimonials</a></p>
 </div>
 
 <div class="tengah-atas">
-    <p style="font-size: 25px; font-weight: 500;">Oliver Bennett</p>
+    <p style="font-size: 25px; font-weight: 500;   font-family: 'Playfair Display', serif;">Oliver Bennett</p>
     <p style="font-size: 14px;">STREET PHOTOGRAPHY</p>
 </div>
 
 <div class="kanan-atas">
     <div class="sosmed">
-        <img src="fb1.png">
+        <a target="_blank" href="https://www.facebook.com/profile.php?id=61576806814829">
+          <img src="fb1.png">
+        </a>
     </div>
 
     <div class="sosmed">
+      <a target="_blank" href="https://www.instagram.com/oliverbennett_321?utm_source=ig_web_button_share_sheet&igsh=MTd6dzltOXFocWEyaw%3D%3D">
         <img src="ig1.png">
+      </a>
     </div>
     
     <div class="sosmed">
+      <a target="_blank" href="https://x.com/obphotograph_">
         <img src="twt1.png">
+      </a>
+
     </div>
 
-    <div class="p-atas">
-        <p>Let's Talk</p>
-    </div>
+    <button class="p-atas">
+        <p><a href="#talk">Let's Talk</a></p>
+    </button>
 </div>
     </header>
 <hr>
@@ -874,26 +845,45 @@ header {
         <div class="kotak10"></div>
     </div>
 
-<!--  -->
+<!-- Testimonial -->
 
-
-
-
-    <div class="testimonial-div">
+    <div id="testi" class="testimonial-div">
     <div class="testimonial-header">
       <div class="testimonial-title">
         Testimonial
         <img src="smile.png">
       </div>
       <div class="dots">
-        <div class="dot"></div>
-        <div class="dot active"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+        <div class="dot" data-index="1"></div>
+        <div class="dot active" data-index="2"></div>
+        <div class="dot" data-index="3"></div>
+        <div class="dot" data-index="4"></div>
       </div>
     </div>
 
-    <div class="testimonial-cards">
+  <div class="testimonial-cards" data-page="1">
+    <div class="card">
+      <p>"We were blown away by how professional and prepared Oliver was during our travel campaign."</p>
+      <div class="author">Agus Lapar,</div>
+      <div class="position">Tourism Manager</div>
+    </div>
+
+    <div class="card">
+      <p>"Thanks to Oliver’s stunning shots, our social media engagement doubled within weeks."</p>
+      <div class="author">Agus Jantan,</div>
+      <div class="position">Social Media Lead - Wanderly</div>
+    </div>
+
+    <div class="card">
+      <p>"Every image had a story. Oliver’s sense of timing and composition is world-class."</p>
+      <div class="author">Agus Betina,</div>
+      <div class="position">Photography Enthusiast</div>
+    </div>
+  </div>
+
+<!-- 2 -->
+
+    <div class="testimonial-cards active" data-page="2">
       <div class="card">
         <p>"Oliver's unique eye for urban landscapes has brought our campaign to life. His ability to capture the soul of the city is unparalleled."</p>
         <div class="author">Emily Clark,</div>
@@ -901,8 +891,11 @@ header {
       </div>
       <div class="card">
         <p>"I hired Oliver for a personal photoshoot, and he exceeded all expectations. His work is not just photography; it's storytelling at its finest."</p>
-        <div class="author">Liam Thompson,</div>
+        <div class="card-dewek">
+        <div  class="author">Liam Thompson,</div>
         <div class="position">Entrepreneur</div>
+        </div>
+
       </div>
       <div class="card">
         <p>"Oliver's workshop opened my eyes to the beauty of urban photography. His guidance and techniques were invaluable. A true master of his craft!"</p>
@@ -910,6 +903,48 @@ header {
         <div class="position">Aspiring Photographer</div>
       </div>
     </div>
+
+<!-- 3 -->
+
+  <div class="testimonial-cards" data-page="3">
+    <div class="card">
+      <p>"Oliver's attention to detail made our brand shoot a huge success. His use of lighting is exceptional."</p>
+      <div class="author">Gus Miftah,</div>
+      <div class="position">Brand Manager - LuxWear</div>
+    </div>
+    <div class="card">
+      <p>"His photos helped us relaunch our website with a more vibrant and authentic visual feel."</p>
+      <div class="author">Agus Difabel,</div>
+      <div class="position">Creative Director - Moda Studio</div>
+    </div>
+    <div class="card">
+      <p>"Oliver doesn’t just take photos—he creates emotion through every frame. It’s incredible!"</p>
+      <div class="author">Agus Salim,</div>
+      <div class="position">Freelance Writer</div>
+    </div>
+  </div>
+
+<!-- 4 -->
+
+  <div class="testimonial-cards" data-page="4">
+    <div class="card">
+      <p>"From commercial to editorial, Oliver always delivers top-tier quality that resonates with our audience."</p>
+      <div class="author">Agus Hahahaha,</div>
+      <div class="position">Photo Editor - FocusMag</div>
+    </div>
+    <div class="card">
+      <p>"We keep coming back to Oliver because his photos always capture exactly what we envision."</p>
+      <div class="author">Agus Wkwkwk,</div>
+      <div class="position">Co-Founder - StudioTone</div>
+    </div>
+    <div class="card">
+      <p>"His creative direction took our campaign from good to outstanding. Highly recommended."</p>
+      <div class="author">Agus Xixixi,</div>
+      <div class="position">Creative Lead - Minimal&Co</div>
+    </div>
+  </div>
+
+  
   </div>
 
   <div class="footer-div">
@@ -925,26 +960,27 @@ header {
       </p>
     </div>
 
-<div class="contact-form">
+<div id="talk" class="contact-form">
   <div class="input-wrapper">
-    <input style="border-top-left-radius: 15px; border-top-right-radius: 15px;" type="text" placeholder="Full name" required />
+    <input id="fullname" style="border-top-left-radius: 15px; border-top-right-radius: 15px;" type="text" placeholder="Full name" required />
     <img src="bintang.png" class="input-icon">
   </div>
 
   <div class="input-wrapper">
-    <input type="email" placeholder="Email Address" required />
+    <input id="email" type="email" placeholder="Email Address" required />
     <img src="bintang.png" class="input-icon">
   </div>
 
   <div class="input-wrapper">
-    <input type="text" placeholder="Phone Number" required />
+    <input id="phone" type="text" placeholder="Phone Number" required />
     <img src="bintang.png" class="input-icon">
   </div>
 
-    <textarea style="border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;" placeholder="Input Field"></textarea>
+    <textarea id="message" style="border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;" placeholder="Input Field"></textarea>
 
-  <button class="submit-btn">Submit</button>
+  <button onclick="submitForm()" class="submit-btn">Submit</button>
 </div>
+
   </div>
 
   <div class="footer-bottom">
@@ -973,6 +1009,74 @@ items.forEach(item => {
     item.querySelector('.accordion-icon').textContent = isActive ? '+' : '×';
   });
 });
+
+// 
+
+const dots = document.querySelectorAll('.dot');
+const pages = document.querySelectorAll('.testimonial-cards');
+
+dots.forEach(dot => {
+  dot.addEventListener('click', () => {
+    const index = dot.getAttribute('data-index');
+
+    // Ganti dot yang aktif
+    dots.forEach(d => d.classList.remove('active'));
+    dot.classList.add('active');
+
+    // Tampilkan halaman sesuai dot yang diklik
+    pages.forEach(page => {
+      if (page.getAttribute('data-page') === index) {
+        page.classList.add('active');
+      } else {
+        page.classList.remove('active');
+      }
+    });
+  });
+});
+
+// email
+
+function submitForm() {
+  const name = document.getElementById("fullname").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!name) {
+    Swal.fire("Oops!", "Bagian 'Full name' belum diisi.", "warning");
+    return;
+  }
+
+  if (!email) {
+    Swal.fire("Oops!", "Bagian 'Email Address' belum diisi.", "warning");
+    return;
+  }
+
+  // ✅ Tambahan: validasi format email
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    Swal.fire("Format Email Salah", "Gunakan format email yang benar, seperti: nama@email.com", "error");
+    return;
+  }
+
+  if (!phone) {
+    Swal.fire("Oops!", "Bagian 'Phone Number' belum diisi.", "warning");
+    return;
+  }
+
+  if (!message) {
+    Swal.fire("Oops!", "Bagian 'Input Field' belum diisi.", "warning");
+    return;
+  }
+
+  Swal.fire("Berhasil!", "Form kamu sudah dikirim. Terima kasih!", "success");
+
+  // Optional reset form
+  document.getElementById("fullname").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("phone").value = "";
+  document.getElementById("message").value = "";
+}
 </script>
 </body>
 </html>
